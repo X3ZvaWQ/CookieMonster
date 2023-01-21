@@ -18,11 +18,11 @@ describe('GetTimeColour', () => {
       Game.mods.cookieMonsterFramework.saveData.cookieMonsterMod.settings.TimeFormat = 0;
     });
     it('Format when time is 0', () => {
-      expect(GetTimeColour(0)).to.deep.equal({ text: 'Done!', colour: 'Green' });
+      expect(GetTimeColour(0)).to.deep.equal({ text: '已完成!', colour: 'Green' });
     });
     it('Format when time is negative', () => {
       expect(GetTimeColour(-1)).to.deep.equal({
-        text: 'Done!',
+        text: '已完成!',
         colour: 'Green',
       });
     });

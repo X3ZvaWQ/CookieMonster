@@ -80,7 +80,7 @@ export default function Upgrade() {
     );
     l('CMTooltipTime').textContent = timeColour.text;
     if (
-      timeColour.text === 'Done!' &&
+      timeColour.text === '已完成!' &&
       Game.cookies < Game.UpgradesInStore[TooltipName].getPrice()
     ) {
       l('CMTooltipTime').textContent = `${timeColour.text} (with Wrink)`;

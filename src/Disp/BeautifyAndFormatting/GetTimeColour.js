@@ -12,7 +12,7 @@ export default function GetTimeColour(time) {
   if (time <= 0) {
     if (Game.mods.cookieMonsterFramework.saveData.cookieMonsterMod.settings.TimeFormat === 1)
       text = '00:00:00:00:00';
-    else text = 'Done!';
+    else text = '已完成!';
     colour = ColourGreen;
   } else {
     text = FormatTime(time);

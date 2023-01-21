@@ -44,11 +44,11 @@ export function CreateBotBar() {
   type.style.fontWeight = 'bold';
   type.appendChild(firstCol(`CM ${VersionMajor}.${VersionMinor}`, ColourYellow));
   const bonus = tbody.appendChild(document.createElement('tr'));
-  bonus.appendChild(firstCol('Bonus Income', ColourBlue));
+  bonus.appendChild(firstCol('收入', ColourBlue));
   const pp = tbody.appendChild(document.createElement('tr'));
-  pp.appendChild(firstCol('Payback Period', ColourBlue));
+  pp.appendChild(firstCol('回本时长', ColourBlue));
   const time = tbody.appendChild(document.createElement('tr'));
-  time.appendChild(firstCol('Time Left', ColourBlue));
+  time.appendChild(firstCol('购买下一个需要时间', ColourBlue));
 
   l('wrapper').appendChild(BotBar);
 
@@ -97,7 +97,7 @@ export function UpdateBotBar() {
       );
       l('CMBotBar').firstChild.firstChild.childNodes[3].childNodes[count].className =
         ColourTextPre + timeColour.colour;
-      if (timeColour.text === 'Done!' && Game.cookies < Game.Objects[i].bulkPrice) {
+      if (timeColour.text === '已完成!' && Game.cookies < Game.Objects[i].bulkPrice) {
         l('CMBotBar').firstChild.firstChild.childNodes[3].childNodes[
           count
         ].textContent = `${timeColour.text} (with Wrink)`;

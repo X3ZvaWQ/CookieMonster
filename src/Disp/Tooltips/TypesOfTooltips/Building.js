@@ -71,7 +71,7 @@ export default function Building() {
         (TooltipPrice - (Game.cookies + GetWrinkConfigBank())) / GetCPS(),
       );
       l('CMTooltipTime').textContent = timeColour.text;
-      if (timeColour.text === 'Done!' && Game.cookies < target[TooltipName].price) {
+      if (timeColour.text === '已完成!' && Game.cookies < target[TooltipName].price) {
         l('CMTooltipTime').textContent = `${timeColour.text} (with Wrink)`;
       } else l('CMTooltipTime').textContent = timeColour.text;
       l('CMTooltipTime').className = ColourTextPre + timeColour.colour;
