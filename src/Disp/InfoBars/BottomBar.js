@@ -48,7 +48,7 @@ export function CreateBotBar() {
   const pp = tbody.appendChild(document.createElement('tr'));
   pp.appendChild(firstCol('回本时长', ColourBlue));
   const time = tbody.appendChild(document.createElement('tr'));
-  time.appendChild(firstCol('购买下一个需要时间', ColourBlue));
+  time.appendChild(firstCol('需要时间', ColourBlue));
 
   l('wrapper').appendChild(BotBar);
 
@@ -97,7 +97,7 @@ export function UpdateBotBar() {
       );
       l('CMBotBar').firstChild.firstChild.childNodes[3].childNodes[count].className =
         ColourTextPre + timeColour.colour;
-      if (timeColour.text === '已完成!' && Game.cookies < Game.Objects[i].bulkPrice) {
+      if (timeColour.text === '已达到!' && Game.cookies < Game.Objects[i].bulkPrice) {
         l('CMBotBar').firstChild.firstChild.childNodes[3].childNodes[
           count
         ].textContent = `${timeColour.text} (with Wrink)`;
